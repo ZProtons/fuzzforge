@@ -72,11 +72,10 @@ makes you suspicious, rerun with `--param-value true` (or whatever else is
 plausible) against the same name list before concluding there's nothing
 there.
 
-## How this was built
+## Testing and verification
 
-Built by Claude (Anthropic), on my instructions. Fully unit-tested with a
-mocked LLM backend (23 tests, no network or API key required to run them),
-then verified end-to-end against
+Fully unit-tested with a mocked LLM backend (23 tests, no network or API key
+required to run them), then verified end-to-end against
 [ClearDesk](https://github.com/ZProtons/Fire-Labs/tree/main/labs/fuzz-lab)
 — my own ffuf lab from the day before — using a stub local LLM server and
 the real `ffuf` binary. That real run caught three genuine bugs before
